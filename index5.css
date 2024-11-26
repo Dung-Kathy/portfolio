@@ -1,0 +1,841 @@
+/* ------------------------------
+   Reset
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Style de la classe logo */
+.logo img {
+    width: 80px; /* Ajuster la taille du logo */
+    height: auto; /* Maintenir le ratio d'aspect */
+    border-radius: 50%; /* Arrondir les coins du logo pour un effet circulaire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une ombre subtile pour donner de la profondeur */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition pour l'animation */
+}
+
+/* Effet d'agrandissement au survol */
+.logo img:hover {
+    transform: scale(1.1); /* Agrandir légèrement le logo au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Augmenter l'ombre au survol */
+}
+
+
+/* ------------------------------
+   Global Styles
+------------------------------ */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-dark {
+    background-color: #333;
+}
+
+.bg-gradient {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.radius {
+    border-radius: 10px;
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e781f4;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo styles */
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Menu styles */
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin: 0 1rem;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #f0a500;
+  }
+  
+  /* Hamburger button */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  /* Mobile menu styles */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #000000;
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  
+    .nav-menu.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  header.dark-mode {
+    background-color: #1f1f1f;
+  }
+  
+  .dark-mode-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4); /* Ajout d’un fond semi-transparent pour améliorer la visibilité */
+}
+.dark-mode-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: fixed;
+    bottom: 20px; /* Positionné depuis le bas */
+    right: 20px;  /* Positionné depuis la droite */
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent pour meilleure visibilité */
+}
+
+.dark-mode-btn:hover {
+    color: #f0a500; /* Couleur au survol */
+    background-color: rgba(0, 0, 0, 0.6); /* Légère opacité augmentée au survol */
+}
+
+
+.dark-mode-btn:hover {
+    color: #f0a500;
+    background-color: rgba(0, 0, 0, 0.6); /* Effet de survol pour le bouton */
+}
+  
+  /* Adaptation des sections */
+  section.dark-mode {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  }
+  
+  footer.dark-mode {
+    background-color: #1a1a1a;
+  }
+  
+/* ------------------------------ 
+   Section "À propos de moi"
+------------------------------ */
+#about-me {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Dégradé esthétique */
+    color: #fff;
+    text-align: center;
+  }
+  
+  #about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-content h3 {
+    font-size: 1.6rem;
+    color: #6a4c9c;
+    margin-top: 20px;
+  }
+  
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-content ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Animation pour l'apparition de la section */
+  #about-me {
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    #about-me h2 {
+      font-size: 2rem;
+    }
+  
+    .about-content {
+      padding: 20px;
+    }
+  
+    .about-content h3 {
+      font-size: 1.4rem;
+    }
+  
+    .about-content ul li {
+      font-size: 1rem;
+    }
+  }
+  
+/* ------------------------------
+   Intro Banner
+------------------------------ */
+/* Style de la bannière d'introduction */
+#intro-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Utilise toute la hauteur de la fenêtre */
+    background: linear-gradient(to right, #ff52bd, #8e2de2); /* Dégradé de couleurs vives */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Section du profil */
+.profile-section {
+    max-width: 800px; /* Limite la largeur du contenu pour une meilleure lisibilité */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Arrière-plan semi-transparent */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(5px); /* Effet flou en arrière-plan */
+}
+
+/* Image de profil */
+.profile-pic {
+    width: 150px; /* Taille de l'image */
+    height: 150px;
+    border-radius: 50%; /* Rendre l'image circulaire */
+    object-fit: cover; /* Assure que l'image couvre bien la zone sans déformer */
+    border: 5px solid white; /* Bordure blanche autour de l'image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Espacement sous l'image */
+    transition: transform 0.3s ease; /* Transition douce */
+}
+
+/* Effet au survol de l'image de profil */
+.profile-pic:hover {
+    transform: scale(1.1); /* Agrandir légèrement l'image au survol */
+}
+
+/* Style du titre */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style du texte */
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Style du bouton de téléchargement */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    background-color: #ff52bd; /* Couleur vive du bouton */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Effet au survol du bouton */
+.download-btn:hover {
+    background-color: #e4007f; /* Couleur au survol */
+    transform: translateY(-5px); /* Effet de levée du bouton */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .profile-section {
+        width: 100%; /* Adapter la largeur sur les petits écrans */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Réduire la taille du titre */
+    }
+
+    .download-btn {
+        font-size: 0.9rem; /* Ajuster la taille du bouton */
+    }
+}
+
+/* ------------------------------ 
+   Sections
+------------------------------ */
+/* Style général de la section projets */
+#projects {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery de projets */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-card p {
+    color: #777;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #ff52bd;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.project-card:hover::after {
+    width: 100%;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.modal-content.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.modal-content p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.modal-content a {
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #ff52bd;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content a:hover {
+    background-color: #e4007f;
+    transform: translateY(-3px);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff52bd;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Affiche les projets en colonne sur mobile */
+    }
+
+    .project-card {
+        max-width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+/* ------------------------------ 
+   Skills Section
+------------------------------ */
+#skills {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  #skills h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 0 10%;
+  }
+  
+  /* Skill Card */
+  .skill {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background-color: #f3f4f6;
+  }
+  
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill:hover .skill-icon {
+    transform: scale(1.1);
+  }
+  
+  .skill h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .skill p {
+    color: #777;
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  
+  /* Responsivité pour les petits écrans */
+  @media (max-width: 768px) {
+    .skills-grid {
+      padding: 0 5%;
+    }
+    .skill {
+      max-width: 90%;
+    }
+  }
+ /* ------------------------------ 
+   Contact Section
+------------------------------ */
+#contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  #contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact form label {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  #contact form input, 
+  #contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  #contact form button {
+    background-color: #ff52bd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #contact form button:hover {
+    background-color: #e4007f;
+    transform: translateY(-3px);
+  }
+  
+  #contact .social-links {
+    margin-top: 30px;
+  }
+  
+  #contact .social-links a {
+    margin: 0 15px;
+    display: inline-block;
+  }
+  
+  #contact .social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  #contact .social-links a:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* ------------------------------ 
+     Footer Section
+  ------------------------------ */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff52bd;
+  }
+  
+  .footer-section .social-links a {
+    margin: 0 15px;
+    display: inline-block;
+  }
+  
+  .footer-section .social-links img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-section .social-links a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .footer-section p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-top: 10px;
+  }
+  
+  /* Responsivité pour petits écrans */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .footer-section ul {
+      padding-left: 0;
+    }
+  }
+  
+/* ------------------------------
+   Responsive Design
+------------------------------ */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000000;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.dark-mode .project-card {
+    background-color: #222; /* Couleur de fond sombre */
+    color: #f1f1f1; /* Texte clair */
+}
+body.dark-mode .modal-content {
+    background-color: #333;
+}
